@@ -1,0 +1,50 @@
+﻿@model Database1.Models.Player
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Player</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.playerLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.playerLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.playerFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.playerFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.positionCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.positionCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teamID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teamID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.playerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

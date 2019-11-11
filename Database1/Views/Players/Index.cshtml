@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Database1.Models.NewPlayer>
+﻿@model IEnumerable<Database1.Models.Player>
 
 @{
     ViewBag.Title = "Index";
@@ -21,13 +21,7 @@
             @Html.DisplayNameFor(model => model.positionCode)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.positionDesc)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.teamID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.teamName)
         </th>
         <th></th>
     </tr>
@@ -44,19 +38,12 @@
             @Html.DisplayFor(modelItem => item.positionCode)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.positionDesc)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.teamID)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.teamName)
-        </td>
-        <td>
-            <!--NEED TO ADD NULL TO HTML ATTRIBUTE IF OVERLOADING CONTROLLER-->
-            @Html.ActionLink("Edit", "Edit", "Players", new { id = item.playerID }, null) |
-            @Html.ActionLink("Details", "Details", "Players", new { id = item.playerID }, null) |
-            @Html.ActionLink("Delete", "Delete", "Players", new { id = item.playerID }, null) 
+            @Html.ActionLink("Edit", "Edit", new { id=item.playerID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.playerID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.playerID })
         </td>
     </tr>
 }
